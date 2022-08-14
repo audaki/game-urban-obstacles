@@ -1,0 +1,385 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://kenney_rpgurbanpack/Tilemap/tilemap_packed.png" type="Texture" id=1]
+[ext_resource path="res://GameScreen.gd" type="Script" id=2]
+[ext_resource path="res://MainMenu.gd" type="Script" id=3]
+[ext_resource path="res://mixkit-player-losing-or-failing-2042.wav" type="AudioStream" id=4]
+[ext_resource path="res://mixkit-arcade-game-complete-or-approved-mission-205.wav" type="AudioStream" id=5]
+[ext_resource path="res://Komiku_-_12_-_Bicycle.mp3" type="AudioStream" id=6]
+
+[sub_resource type="TileSet" id=1]
+0/name = "roof1"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 48, 128, 48 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 3, 0 ), 176, Vector2( 3, 1 ), 50, Vector2( 3, 2 ), 48, Vector2( 4, 0 ), 152, Vector2( 4, 1 ), 26, Vector2( 4, 2 ), 56, Vector2( 5, 0 ), 255, Vector2( 5, 1 ), 507, Vector2( 5, 2 ), 24, Vector2( 6, 0 ), 447, Vector2( 6, 1 ), 510, Vector2( 6, 2 ), 16, Vector2( 7, 0 ), 144, Vector2( 7, 1 ), 146, Vector2( 7, 2 ), 18 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "sidewalk"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 128, 0, 128, 48 )
+1/tile_mode = 1
+1/autotile/bitmask_mode = 1
+1/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 3, 0 ), 176, Vector2( 3, 1 ), 50, Vector2( 3, 2 ), 48, Vector2( 4, 0 ), 152, Vector2( 4, 1 ), 26, Vector2( 4, 2 ), 56, Vector2( 5, 0 ), 255, Vector2( 5, 1 ), 507, Vector2( 5, 2 ), 24, Vector2( 6, 0 ), 447, Vector2( 6, 1 ), 510, Vector2( 6, 2 ), 16, Vector2( 7, 0 ), 144, Vector2( 7, 1 ), 146, Vector2( 7, 2 ), 18 ]
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 16, 16 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "grass"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 128, 48 )
+2/tile_mode = 1
+2/autotile/bitmask_mode = 1
+2/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 17039538, Vector2( 0, 2 ), 54, Vector2( 1, 0 ), 20971704, Vector2( 1, 1 ), 21299386, Vector2( 1, 2 ), 327738, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 4259994, Vector2( 2, 2 ), 27, Vector2( 3, 0 ), 176, Vector2( 3, 1 ), 50, Vector2( 3, 2 ), 48, Vector2( 4, 0 ), 152, Vector2( 4, 1 ), 26, Vector2( 4, 2 ), 56, Vector2( 5, 0 ), 255, Vector2( 5, 1 ), 507, Vector2( 5, 2 ), 24, Vector2( 6, 0 ), 447, Vector2( 6, 1 ), 510, Vector2( 6, 2 ), 16, Vector2( 7, 0 ), 144, Vector2( 7, 1 ), 146, Vector2( 7, 2 ), 18 ]
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 16, 16 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "roof2"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 128, 48, 128, 48 )
+3/tile_mode = 1
+3/autotile/bitmask_mode = 1
+3/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 3, 0 ), 176, Vector2( 3, 1 ), 50, Vector2( 3, 2 ), 48, Vector2( 4, 0 ), 152, Vector2( 4, 1 ), 26, Vector2( 4, 2 ), 56, Vector2( 5, 0 ), 255, Vector2( 5, 1 ), 507, Vector2( 5, 2 ), 24, Vector2( 6, 0 ), 447, Vector2( 6, 1 ), 510, Vector2( 6, 2 ), 16, Vector2( 7, 0 ), 144, Vector2( 7, 1 ), 146, Vector2( 7, 2 ), 18 ]
+3/autotile/icon_coordinate = Vector2( 0, 0 )
+3/autotile/tile_size = Vector2( 16, 16 )
+3/autotile/spacing = 0
+3/autotile/occluder_map = [  ]
+3/autotile/navpoly_map = [  ]
+3/autotile/priority_map = [  ]
+3/autotile/z_index_map = [  ]
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "water"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 128, 96, 128, 48 )
+4/tile_mode = 1
+4/autotile/bitmask_mode = 1
+4/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 17039538, Vector2( 0, 2 ), 54, Vector2( 1, 0 ), 20971704, Vector2( 1, 1 ), 21299386, Vector2( 1, 2 ), 327738, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 4259994, Vector2( 2, 2 ), 27, Vector2( 3, 0 ), 176, Vector2( 3, 1 ), 50, Vector2( 3, 2 ), 48, Vector2( 4, 0 ), 152, Vector2( 4, 1 ), 26, Vector2( 4, 2 ), 56, Vector2( 5, 0 ), 255, Vector2( 5, 1 ), 507, Vector2( 5, 2 ), 24, Vector2( 6, 0 ), 447, Vector2( 6, 1 ), 510, Vector2( 6, 2 ), 16, Vector2( 7, 0 ), 144, Vector2( 7, 1 ), 146, Vector2( 7, 2 ), 18 ]
+4/autotile/icon_coordinate = Vector2( 0, 0 )
+4/autotile/tile_size = Vector2( 16, 16 )
+4/autotile/spacing = 0
+4/autotile/occluder_map = [  ]
+4/autotile/navpoly_map = [  ]
+4/autotile/priority_map = [  ]
+4/autotile/z_index_map = [  ]
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "red wall"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 256, 0, 112, 64 )
+5/tile_mode = 2
+5/autotile/icon_coordinate = Vector2( 0, 0 )
+5/autotile/tile_size = Vector2( 16, 16 )
+5/autotile/spacing = 0
+5/autotile/occluder_map = [  ]
+5/autotile/navpoly_map = [  ]
+5/autotile/priority_map = [  ]
+5/autotile/z_index_map = [  ]
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "yellow wall"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 256, 64, 112, 64 )
+6/tile_mode = 2
+6/autotile/icon_coordinate = Vector2( 0, 0 )
+6/autotile/tile_size = Vector2( 16, 16 )
+6/autotile/spacing = 0
+6/autotile/occluder_map = [  ]
+6/autotile/navpoly_map = [  ]
+6/autotile/priority_map = [  ]
+6/autotile/z_index_map = [  ]
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "street"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 240, 176, 48 )
+7/tile_mode = 2
+7/autotile/icon_coordinate = Vector2( 0, 0 )
+7/autotile/tile_size = Vector2( 16, 16 )
+7/autotile/spacing = 0
+7/autotile/occluder_map = [  ]
+7/autotile/navpoly_map = [  ]
+7/autotile/priority_map = [  ]
+7/autotile/z_index_map = [  ]
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "tilemap_packed.png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 384, 240, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 240, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 240, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 256, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 272, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 368, 240, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 368, 256, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 368, 272, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 416, 240, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 416, 256, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 416, 272, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 400, 240, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 400, 256, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 400, 272, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "down",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "left",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "right",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "up",
+"speed": 15.0
+} ]
+
+[node name="Main" type="Node2D"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="GameScreen" type="TileMap" parent="."]
+position = Vector2( 128, 64 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" type="AnimatedSprite" parent="GameScreen"]
+visible = false
+frames = SubResource( 15 )
+animation = "down"
+
+[node name="Taxi" type="Sprite" parent="GameScreen"]
+visible = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 244, 234, 24, 22 )
+
+[node name="Briefing" type="Label" parent="GameScreen"]
+anchor_right = 16.0
+anchor_bottom = 16.0
+margin_top = -48.0
+margin_right = 245.0
+margin_bottom = -18.0
+text = "You can't swim, reach the Rescue Taxi!"
+
+[node name="Score" type="Label" parent="GameScreen"]
+visible = false
+margin_left = 261.0
+margin_top = -48.0
+margin_right = 372.0
+margin_bottom = -34.0
+text = "Times Escaped: 0"
+
+[node name="TimeLeft" type="Label" parent="GameScreen"]
+visible = false
+margin_left = 8.0
+margin_top = -16.0
+margin_right = 119.0
+margin_bottom = -2.0
+text = "Time Left: 10s"
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="GameScreen"]
+stream = ExtResource( 4 )
+
+[node name="LevelCompleteSound" type="AudioStreamPlayer" parent="GameScreen"]
+stream = ExtResource( 5 )
+
+[node name="LevelMusic" type="AudioStreamPlayer" parent="GameScreen"]
+stream = ExtResource( 6 )
+
+[node name="MainMenu" type="Control" parent="."]
+margin_left = 128.0
+margin_top = 64.0
+margin_right = 168.0
+margin_bottom = 104.0
+script = ExtResource( 3 )
+
+[node name="HighScore" type="Label" parent="MainMenu"]
+visible = false
+margin_top = -24.0
+margin_right = 111.0
+margin_bottom = -10.0
+text = "High Score: 0"
+
+[node name="StartGame" type="Button" parent="MainMenu"]
+margin_top = 36.0
+margin_right = 112.0
+margin_bottom = 20.0
+text = "START GAME <3"
+
+[node name="ExitGame" type="Button" parent="MainMenu"]
+margin_top = 72.0
+margin_right = 81.0
+margin_bottom = 56.0
+text = "END GAME"
+
+[node name="Credits" type="Label" parent="MainMenu"]
+margin_top = 144.0
+margin_right = 111.0
+margin_bottom = 90.0
+text = "Credits
+
+Game by Kira \"audaki\" Backes
+
+Sprites by www.kenney.nl 
+Sounds by mixkit.co
+Music by chosic/Komiku"
+
+[connection signal="game_finished" from="GameScreen" to="MainMenu" method="_on_GameScreen_game_finished"]
+[connection signal="game_started" from="GameScreen" to="MainMenu" method="_on_GameScreen_game_started"]
+[connection signal="pressed" from="MainMenu/StartGame" to="GameScreen" method="_on_StartGame_pressed"]
+[connection signal="pressed" from="MainMenu/ExitGame" to="GameScreen" method="_on_ExitGame_pressed"]
